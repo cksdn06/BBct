@@ -18,8 +18,8 @@ Failure to use the name of the first developer or contributor in warranty or pro
 * Members: Chan Woo Park, Tae Kyu Baek, Ji Ho Baek
 
 * Contents: 
-  1. Ray Tracing Parallel Code
-  2. Gender-Differentiated Artificial Intelligence (TensorFlow)
+  - Ray Tracing Parallel Code
+  - Gender-Differentiated Artificial Intelligence (TensorFlow)
 
 ***
 
