@@ -6,7 +6,11 @@
 Failure to use the name of the first developer or contributor in warranty or promotion of the product.**
 
 Hosted by: UNIST, KISTI
+
 Duration: 2023-07-17 to 2023-07-21 (5 days)
+
 Team name: BBct
+
 Members: Chan Woo Park, Tae Kyu Baek, Ji Ho Baek
+
 Content: Ray Tracing Parallel Code, Gender-Differentiated Artificial Intelligence (TensorFlow)
