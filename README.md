@@ -24,7 +24,7 @@ Contents:
 
 ***
 
-# How to USE
+# How to USE __Ray Tracing Parallel Code__
 
 1. Download [Anaconda](https://www.anaconda.com/)
 2. Run Anaconda Prompt
