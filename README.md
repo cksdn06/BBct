@@ -17,14 +17,14 @@ Failure to use the name of the first developer or contributor in warranty or pro
 > Team name: BBct
 >
 > Members: Chan Woo Park, Tae Kyu Baek, Ji Ho Baek
-
+>
 >Contents: 
 > - Ray Tracing Parallel Code
 > - Gender-Differentiated Artificial Intelligence (TensorFlow)
 
 ***
 
-### How to USE __Ray Tracing Parallel Code__
+### How to USE <span style="color:red">Ray Tracing</span>
 
 1. Download [Anaconda](https://www.anaconda.com/)
 2. Run Anaconda Prompt
