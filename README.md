@@ -15,7 +15,7 @@ Failure to use the name of the first developer or contributor in warranty or pro
 
 * Team name: BBct
 
-* Members: Chan Woo Park, Tae Kyu Baek, Ji Ho Baek
+* Members: Chan woo Park, Tae kyu Baek, Ji ho Baek
 
 * Contents: 
   - Ray Tracing Parallel Code
