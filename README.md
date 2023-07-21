@@ -19,7 +19,7 @@ Failure to use the name of the first developer or contributor in warranty or pro
 
 * Contents: 
   - Ray Tracing Parallel Code
-  - Gender-Differentiated Artificial Intelligence (TensorFlow)
+  - Gender-Classification Artificial Intelligence (TensorFlow)
 
 ***
 
