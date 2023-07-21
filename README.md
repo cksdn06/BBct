@@ -13,4 +13,6 @@ Team name: BBct
 
 Members: Chan Woo Park, Tae Kyu Baek, Ji Ho Baek
 
-Content: Ray Tracing Parallel Code, Gender-Differentiated Artificial Intelligence (TensorFlow)
+Contents: 
+- Ray Tracing Parallel Code
+- Gender-Differentiated Artificial Intelligence (TensorFlow)
