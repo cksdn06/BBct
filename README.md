@@ -1,5 +1,5 @@
 # BBct
-7TH Super Computing Youth Camp 2023 Results
+**[7TH Super Computing Youth Camp 2023](https://sites.google.com/view/scyouthcamp/) Results**
 
 ***
 
