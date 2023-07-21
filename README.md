@@ -28,9 +28,10 @@ Contents:
 
 1. Download Anaconda<https://www.anaconda.com/>
 2. Run Anaconda Prompt
-3. Install MPI ``*$* conda create -n mpi mpi4py numpy Pillow``
-5. Activate Conda``*$* conda activate mpi``
+3. Install MPI *$* `` conda create -n mpi mpi4py numpy Pillow``
+5. Activate Conda *$* `` conda activate mpi``
 6. Set up a directory ``cd C:\..``
-7. Run file ``mpiexec -n [number] python [name].py
+7. Run file ``mpiexec -n [number of process] python ray_mpi.py
+8. Find image3.png
 
 ***
