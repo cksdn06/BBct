@@ -88,6 +88,14 @@ objects = [
     { 'center': np.array([0, -9000, 0]), 'radius': 9000 - 0.7, 'ambient': np.array([0.1, 0.1, 0.1]), 'diffuse': np.array([0.6, 0.6, 0.6]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 }
 ]
 
+# Solar System
+'''light = { 'position': np.array([-0.08, 0, 0.33]), 'ambient': np.array([1, 1, 1]), 'diffuse': np.array([1, 1, 1]), 'specular': np.array([1, 1, 1]) }
+objects = [
+    { 'center': np.array([0, 0, 0]), 'radius': 0.12, 'ambient': np.array([0.1, 0, 0]), 'diffuse': np.array([0.7, 0.7, 0.1]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
+    { 'center': np.array([-0.6748, -0.1539, 0]), 'radius': 0.02, 'ambient': np.array([0.1, 0, 0.1]), 'diffuse': np.array([0.7, 0.7, 0.7]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
+    { 'center': np.array([ -0.5868, -0.126, 0]), 'radius': 0.045, 'ambient': np.array([0, 0.1, 0.1]), 'diffuse': np.array([0.1, 0.7, 0.7]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
+   ]'''
+
 ratio = float(width) / height 
 screen = (-1, 1 / ratio, 1, -1 / ratio) # left, top, right, bottom
 
