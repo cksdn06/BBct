@@ -1,4 +1,4 @@
-# Team *BBct*
+Team # *BBct*
 **[7th Super Computing Youth Camp 2023](https://sites.google.com/view/scyouthcamp/) Results**
 
 ***
