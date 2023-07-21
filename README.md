@@ -3,12 +3,12 @@
 **[7th Super Computing Youth Camp 2023](https://sites.google.com/view/scyouthcamp/) Results**
 
 ***
-## LICENSE
+### LICENSE
 **BSD License: Include in source code or documentation and other materials the disclaimer of copyright presentation, conditions of compliance, and disclaimer of warranty when redistributing
 Failure to use the name of the first developer or contributor in warranty or promotion of the product.**
 
 ***
-## Abstract
+### Abstract
 
 Hosted by: UNIST, KISTI
 
@@ -24,7 +24,7 @@ Contents:
 
 ***
 
-## How to USE __Ray Tracing Parallel Code__
+### How to USE __Ray Tracing Parallel Code__
 
 1. Download [Anaconda](https://www.anaconda.com/)
 2. Run Anaconda Prompt
@@ -36,7 +36,7 @@ Contents:
 
 ***
 
-## Code Description
+### Code Description
 
 1. Library and Function Definitions: Import the ``mpi4py``, ``numpy``, and ``matplotlib.pyplot`` libraries, and define functions required for ray tracing, such as ``normalize``, ``reflected``, ``sphere_intersect``, ``nearest_intersected_object``, and ``ray_tracing``.
 
