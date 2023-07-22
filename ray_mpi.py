@@ -66,6 +66,7 @@ def ray_tracing(x, y):
 		direction = reflected(direction, normal_to_surface)
 	return color
 
+# MPI
 comm = MPI.COMM_WORLD
 size = comm.Get_size()
 rank = comm.Get_rank()
@@ -75,8 +76,8 @@ start_time = MPI.Wtime()
 max_depth = 3
 
 #### parameters
-width = 300
-height = 200
+width = 3840
+height = 2160
 camera = np.array([0, 0, 1])
 #camera = np.array([0, 1, 1])
 light = { 'position': np.array([5, 5, 5]), 'ambient': np.array([1, 1, 1]), 'diffuse': np.array([1, 1, 1]), 'specular': np.array([1, 1, 1]) }
@@ -88,31 +89,23 @@ objects = [
     { 'center': np.array([0, -9000, 0]), 'radius': 9000 - 0.7, 'ambient': np.array([0.1, 0.1, 0.1]), 'diffuse': np.array([0.6, 0.6, 0.6]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 }
 ]
 
-# Solar System
-'''light = { 'position': np.array([-0.08, 0, 0.33]), 'ambient': np.array([1, 1, 1]), 'diffuse': np.array([1, 1, 1]), 'specular': np.array([1, 1, 1]) }
-objects = [
-    { 'center': np.array([0, 0, 0]), 'radius': 0.12, 'ambient': np.array([0.1, 0, 0]), 'diffuse': np.array([0.7, 0.7, 0.1]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
-    { 'center': np.array([-0.6748, -0.1539, 0]), 'radius': 0.02, 'ambient': np.array([0.1, 0, 0.1]), 'diffuse': np.array([0.7, 0.7, 0.7]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
-    { 'center': np.array([ -0.5868, -0.126, 0]), 'radius': 0.045, 'ambient': np.array([0, 0.1, 0.1]), 'diffuse': np.array([0.1, 0.7, 0.7]), 'specular': np.array([1, 1, 1]), 'shininess': 100, 'reflection': 0.5 },
-   ]'''
-
 ratio = float(width) / height 
 screen = (-1, 1 / ratio, 1, -1 / ratio) # left, top, right, bottom
-
+####
 
 if height % size > rank:
     N = 1
 else :
     N = 0
 
-st = rank*(height//size) + comm.scan(N,MPI.SUM) - N
-ed = (rank+1)*(height//size) + comm.scan(N,MPI.SUM)
+start_row = rank*(height//size) + comm.scan(N,MPI.SUM) - N
+end_row = (rank+1)*(height//size) + comm.scan(N,MPI.SUM)
 
-image = np.zeros((ed-st, width, 3))
+image = np.zeros((end_row-start_row, width, 3))
 Y = np.linspace(screen[1], screen[3], height)
 X = np.linspace(screen[0], screen[2], width)
 
-for i, y in enumerate(Y[st:ed]):
+for i, y in enumerate(Y[start_row:end_row]):
     for j, x in enumerate(X):
         color = ray_tracing(x,y)
         image[i, j] = np.clip(color, 0, 1)
@@ -121,15 +114,15 @@ for i, y in enumerate(Y[st:ed]):
 counts = comm.gather(len(image)*width*3, root=0)
 recvbuf= None
 if rank == 0:
-    print(counts)
+    # print(counts)
     recvbuf = np.empty((height,width,3), dtype=float)
 
 # (height, width, 3)
-comm.Gatherv(sendbuf=image,recvbuf=(recvbuf,counts), root = 0)
+comm.Gatherv(sendbuf=image,recvbuf=(recvbuf, counts), root=0)
 recvbuf = np.array(recvbuf)
-
 # print(recvbuf)
-plt.imsave('image3.png', image)
+if rank == 0:
+	plt.imsave('image3.png',recvbuf)
 
 end_time = MPI.Wtime()
 if rank == 0: 
