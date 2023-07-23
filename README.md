@@ -79,16 +79,16 @@ Failure to use the name of the first developer or contributor in warranty or pro
 1. Data Preparation:
 * Prepare a dataset of face images classified into two classes: "male" and "female."
 * Preprocess the image data, resizing each image to 64x64 pixels and converting them to 3D tensors.
-3. Model Architecture:
+2. Model Architecture:
 * Construct a Convolutional Neural Network (CNN) model.
 * Use Conv2D layers to extract features from the images and MaxPooling2D layers to downsample and retain important information.
 * Stack multiple Conv2D and MaxPooling2D layers to build the deep learning model.
 * Finally, flatten the data and pass it through Dense layers to produce the output.
-4. Model Compilation:
+3. Model Compilation:
 * Compile the model using categorical_crossentropy as the loss function and SGD (Stochastic Gradient Descent) optimizer.
-5. Model Training:
+4. Model Training:
 * Train the model using the training data (X_train and Y_train).
 * Use EarlyStopping callback to stop training if the validation loss does not improve after a certain number of epochs.
-6. Model Evaluation:
+5. Model Evaluation:
 * Evaluate the trained model on the test data (X_test and Y_test) to measure its accuracy.
 * Output the accuracy value and plot a graph to visualize the classification results.
