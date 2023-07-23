@@ -76,8 +76,8 @@ start_time = MPI.Wtime()
 max_depth = 3
 
 #### parameters
-width = 3840
-height = 2160
+width = 300
+height = 200
 camera = np.array([0, 0, 1])
 #camera = np.array([0, 1, 1])
 light = { 'position': np.array([5, 5, 5]), 'ambient': np.array([1, 1, 1]), 'diffuse': np.array([1, 1, 1]), 'specular': np.array([1, 1, 1]) }
